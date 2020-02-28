@@ -12,6 +12,9 @@ f.close()
 
 duplicates = []  # Return the list of duplicates in this data structure
 
+"""
+starter-code had complexity of O(n^2)
+"""
 # Replace the nested for loops below with your improvements
 for name_2 in names_2:
   if name_2 in names_1:

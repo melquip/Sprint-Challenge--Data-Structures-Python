@@ -1,6 +1,6 @@
 import time
 
-start_time = time.time()
+start_time = time.perf_counter()
 
 f = open('names_1.txt', 'r')
 names_1 = f.read().split("\n")  # List containing 10000 names
@@ -14,7 +14,7 @@ names_1 = set(names_1)
 names_2 = set(names_2)
 duplicates = list(names_1.intersection(names_2))
 
-end_time = time.time()
+end_time = time.perf_counter()
 print (f"{len(duplicates)} duplicates:\n\n{', '.join(duplicates)}\n\n")
 print (f"runtime: {end_time - start_time} seconds")
 
