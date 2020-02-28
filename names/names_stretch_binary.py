@@ -19,9 +19,8 @@ def binary_search(arr, target):
     else:
       low = middle + 1
   return -1  # not found
-
-
-start_time = time.time()
+  
+start_time = time.process_time()
 
 f = open('names_1.txt', 'r')
 names_1 = f.read().split("\n")  # List containing 10000 names
@@ -39,7 +38,7 @@ for name_2 in names_2:
   if binary_search(names_1, name_2):
     duplicates.append(name_2)
 
-end_time = time.time()
+end_time = time.process_time()
 print (f"{len(duplicates)} duplicates:\n\n{', '.join(duplicates)}\n\n")
 print (f"runtime: {end_time - start_time} seconds")
 
